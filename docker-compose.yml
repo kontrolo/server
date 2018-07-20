@@ -1,0 +1,10 @@
+version: "2.1"
+
+services:
+  proxy:
+    image: kontrolo/nginx-proxy:latest
+    ports:
+      - "80:80"
+    network_mode: "bridge"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
